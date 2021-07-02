@@ -57,9 +57,28 @@ class _HomePageState extends State<HomePage> {
                             : Container(
                                 width: 250,
                                 height: 190,
-                                child: Icon(
-                                  Icons.camera_alt,
-                                  color: Colors.black,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.camera_alt,
+                                      color: Colors.black,
+                                    ),
+                                    Text(
+                                      'Press for Gallery',
+                                      style: TextStyle(
+                                        color: Colors.blue,
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                    Text(
+                                      'Long Press for Camera',
+                                      style: TextStyle(
+                                        color: Colors.blue,
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
                       ),
