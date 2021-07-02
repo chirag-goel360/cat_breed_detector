@@ -50,12 +50,12 @@ class _HomePageState extends State<HomePage> {
                         child: _image != null
                             ? Image.file(
                                 _image,
-                                height: 160,
+                                height: 250,
                                 width: 400,
                                 fit: BoxFit.cover,
                               )
                             : Container(
-                                width: 140,
+                                width: 250,
                                 height: 190,
                                 child: Icon(
                                   Icons.camera_alt,
@@ -69,7 +69,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             SizedBox(
-              height: 160,
+              height: 150,
             ),
             Container(
               margin: EdgeInsets.only(
@@ -79,8 +79,9 @@ class _HomePageState extends State<HomePage> {
                 '$result',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 35,
-                  color: Colors.blueAccent,
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.teal,
                   backgroundColor: Colors.white60,
                 ),
               ),
@@ -147,7 +148,7 @@ class _HomePageState extends State<HomePage> {
     });
     recognitions.forEach((element) {
       setState(() {
-        result += element["label"];
+        result += element["label"]+'\n';
       });
     });
   }
